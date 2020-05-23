@@ -159,7 +159,7 @@ class Epilogue3 extends Component {
             this.setState({ loading: true });
             const regretNotDoing = localStorage.getItem('regretNotDoing').split(':')[1];
             const flower = this.flower_map[regretNotDoing];
-            let response = await fetch(`/generateThumbnail`, {
+            let response = await fetch(`https://deadline-always-exists.krist7599555.ml/generateThumbnail`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
