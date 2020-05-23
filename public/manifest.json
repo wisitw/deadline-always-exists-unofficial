@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Deadline Always Exists",
+  "name": "Deadline Always Exists แบบจำลองเดดไลน์ที่ชวนคุณมาย้อนคุยกับตัวเองสั้นๆ",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://deadline-always-exists.com/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
