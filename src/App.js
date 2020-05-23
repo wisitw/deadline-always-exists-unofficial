@@ -94,6 +94,8 @@ import UseMobile from './UseMobile/UseMobile';
 import Logo from './1-MainStories/0-Logo';
 import Email from './Components/Email/Email';
 
+import GA from './GA'
+
 class App extends Component {
     state = {};
     constructor(props) {
@@ -115,8 +117,10 @@ class App extends Component {
                     {/* <MediaQuery maxDeviceWidth={480} orientation='landscape'>
                         <UsePortrait />
                     </MediaQuery> */}
-                    <MediaQuery maxDeviceWidth={480}>
+                    <MediaQuery maxDeviceWidth={600}>
                         <Router>
+                            { GA.init() && <GA.RouteTracker /> }
+
                             <Route exact path='/' component={Logo} />
                             <Route path='/warning' component={Warning} />
                             <Route path='/preface-transition' component={PrefaceTransition} />
