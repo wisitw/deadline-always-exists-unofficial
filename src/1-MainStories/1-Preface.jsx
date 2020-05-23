@@ -36,8 +36,9 @@ class Preface extends Component {
                     ขอบคุณทุกคนที่กดเข้ามา ไม่ว่าบังเอิญหรือตั้งใจ <br /> ตอนนี้ขอให้คุณค่อย ๆ
                     ปล่อยให้เวลาห้านาทีนี้ให้ผ่านไปอย่างช้า ๆ <br /> แล้วคุยกับตัวเองกัน
                 </p>
-                <br />
-                <br />
+                <p className='contrast-font-color' style={{ lineHeight:1.1 }}>
+                    <small>เว็บไซต์นี้ เกิดจากความตั้งใจที่จะสนับสนุนด้านเทคโนโลยีให้กับผู้จัดทำ<br />ได้มีการแจ้งและบอกกล่าวเจ้าของผลงานแล้ว<br />มิได้มีเจตนาละเมิดลิขสิทธิ์หรือแสวงหากำไรจากผลงานดังกล่าว</small>    
+                </p>
                 <button className='mt-1 clear-btn text-right'>
                     <img
                         src={process.env.PUBLIC_URL + '/images/icon/iconlogo-12.png'}

@@ -38,19 +38,19 @@ class Welcome extends Component {
                     className='introduction-logo'
                 />
                 <div className='font-italic d-flex flex-column text-color-orange'>
-                    ยินดีต้องรับสู่แบบจำลองความตาย
+                    ยินดีต้อนรับสู่แบบจำลองความตาย
                     <br />
                     ที่จะชวนคุณมาย้อนคุยกับตัวเองสั้น ๆ
                 </div>
                 <label className='text-left'>
                     ชื่อ
                     <br />
-                    <div className='text-small-label'>(กรุณากรอกชื่อเป็นภาษาอังกฤษ ห้ามเว้นวรรค หรือใส่สัญลักษณ์)</div>
+                    <div className='text-small-label'>(กรุณากรอกชื่อของไทย ด้วยภาษาไทย ภาษาอังกฤษ หรือสัญลักษณ์)</div>
                 </label>
                 <input
                     className='textarea-white no-resize textarea-text-center-welcome outline-none'
                     type='text'
-                    pattern='[a-zA-Z]*'
+                    // pattern='[a-zA-Z]*'
                     value={this.state.name}
                     name='name'
                     onChange={this.handleOnChange}
