@@ -1,38 +1,372 @@
-.App {
-  text-align: center;
+.square,
+.circle {
+    pointer-events: none;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin: 1px;
+    background-color: currentColor;
+    font-size: 14px;
+}
+p {
+    white-space: pre-wrap;
+}
+div {
+    white-space: pre-wrap;
+}
+.opacity-0 {
+    opacity: 0;
+}
+.clear-btn {
+    padding: 0px 0px;
+    background: transparent;
+    border-width: 0px;
+}
+.share-btn {
+    background: transparent;
+    border-width: 0px;
+    max-width: 50px;
+}
+.small-icon {
+    width: 18px;
+    height: 18px;
+}
+.next-icon {
+    height: 36px;
+}
+.share-btn-img {
+    width: 50px;
+    height: 50px;
+}
+.skip-button {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+textarea {
+    border-radius: 8px;
+    outline: none !important;
+    resize: none;
+}
+.prologue-screen {
+    min-height: 100vh;
+}
+.textarea-black {
+    background: black;
+    color: white;
+    border: 0px solid;
+    box-shadow: 0 0 0;
+    border-radius: 8px;
+    font-size: large;
+    text-align: center;
+    min-height: 1em;
+    vertical-align: middle;
+    display: inline-block;
+}
+.textarea-grey {
+    background: #e6e6e6;
+    color: black;
+    border: 0px solid;
+    box-shadow: 0 0 0;
+    border-radius: 8px;
+    font-size: 24px;
+    min-height: 1em;
+    vertical-align: middle;
+    display: inline-block;
+}
+.textarea-white {
+    background: white;
+    color: black;
+    border: 1px solid;
+    box-shadow: 0 0 0;
+    border-color: #f27a22;
+    outline: none !important;
+    border-radius: 8px;
+    font-size: large;
+    text-align: center;
+    min-height: 1rem;
+    vertical-align: middle;
+    display: inline-block;
+}
+.no-resize {
+    resize: none;
+}
+.textarea-text-center {
+    font-size: 24px;
+    line-height: 36px;
+    min-width: 63vw;
+    max-width: 80vw;
+}
+.textarea-text-center-welcome {
+    font-size: 24px;
+    line-height: 36px;
+}
+.text-24 {
+    font-size: 24px !important;
+}
+.choice-btn {
+    font-style: italic;
+    outline: none;
+    border-radius: 8px;
+    border-width: 0px;
+    background-color: #f0f0f0;
+}
+.choice-btn-black {
+    font-style: italic;
+    outline: none;
+    border-radius: 8px;
+    border-width: 0px;
+    color: black;
+    background-color: #b4b5b3;
+}
+.choice-btn-white {
+    font-style: italic;
+    outline: none;
+    border-radius: 8px;
+    border-width: 0px;
+    color: white;
+    background-color: #4e4e4d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.choice-btn-white-small {
+    font-size: 20px;
+    font-style: italic;
+    outline: none;
+    border-radius: 8px;
+    border-width: 0px;
+    color: white;
+    background-color: #4e4e4d;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu {
+    position: fixed;
+    bottom: -1px;
+    right: 0px;
+    width: 100vw;
+    min-height: 20px;
+    background-color: white;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu-icon {
+    width: 32px;
 }
-
-.App-link {
-  color: #61dafb;
+.width-50px {
+    width: 50px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right-0 {
+    float: right;
+}
+.float-bottom-left {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+}
+.float-bottom-right {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+.outline-none {
+    outline: none;
+}
+.fit-screen {
+    width: 100vw;
+    height: 100vh;
+}
+.introduction-font-style {
+    font-size: 0.75em;
+    /* font-size: 16px; */
+}
+@media (max-height: 570px) {
+    .contrast-font-color {
+        /* mix-blend-mode: difference;
+        color: white; */
+        font-size: 0.75em;
+    }
+}
+.logo-logo {
+    width: 50%;
+    height: auto;
+    margin: auto auto;
+}
+.introduction-logo {
+    max-width: 50%;
+    margin: 0px auto;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.text-normal {
+    font-size: 1em;
+}
+.text-small-label {
+    font-size: 0.7em;
+}
+.text-color-orange {
+    color: #f27a22;
+}
+.btn-default {
+    border-radius: 0px;
+    color: white;
+    margin: auto auto;
+    max-width: 250px;
+    min-height: 50px;
+    border-width: 0px;
+    background-color: #a72a18;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.overlay-flower {
+    background-image: url(/images/flower/Bg_Flower-1.gif);
+}
+.bg-black {
+    background-color: black;
+}
+.bg-cream {
+    background-color: #ffdac0;
+}
+.bg-card {
+    background-image: url(/images/background/bg-card.gif);
+    background-color: black;
+    background-size: 100vw 100vh;
+    color: white;
+}
+.bg-1 {
+    background-image: url(/images/background/1.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-2 {
+    background-image: url(/images/background/2.gif);
+    background-color: black;
+    background-size: 100vw 100vh;
+    color: white;
+}
+.bg-3 {
+    background-image: url(/images/background/3.gif);
+    background-color: black;
+    background-size: 100vw 100vh;
+    color: white;
+}
+.bg-6 {
+    background-image: url(/images/background/6.gif);
+    background-color: black;
+    background-size: 100vw 100vh;
+    color: white;
+}
+.bg-6_2 {
+    background-image: url(/images/background/6_2.gif);
+    background-color: black;
+    background-size: 100vw 100vh;
+    color: white;
+}
+.bg-7_2 {
+    background-image: url(/images/background/7_2.gif);
+    background-color: #fb7408;
+    background-size: 100vw 100vh;
+    color: white;
+}
+.bg-orange {
+    background-color: #fb7408;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-9 {
+    background-image: url(/images/background/9.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-10 {
+    background-image: url(/images/background/10.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11 {
+    background-image: url(/images/background/11.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11-2 {
+    background-image: url(/images/background/11_2.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11-1-1 {
+    background-image: url(/images/background/11.1.1.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11-2-1_2 {
+    background-image: url(/images/background/11.2.1_2.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11-3-1 {
+    background-image: url(/images/background/11.3.1.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11-4-1 {
+    background-image: url(/images/background/11.4.1.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11-4-1_2 {
+    background-image: url(/images/background/11.4.1_2.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-smile {
+    background-image: url(/images/background/Smile.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11-5-1 {
+    background-image: url(/images/background/11.5.1.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11-5-1_3 {
+    background-image: url(/images/background/11.5.1_3.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-11-6-1_4 {
+    background-image: url(/images/background/11.6.1_4.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+.bg-13 {
+    background-image: url(/images/background/13.gif);
+    background-color: white;
+    background-size: 100vw 100vh;
+    color: black;
+}
+/* prettier-ignore */
+.bg-4_5 {
+    background-image: url(/images/background/4,_5.gif);
+    background-color: black;
+    background-size: 100vw 100vh;
+    color: white;
 }
