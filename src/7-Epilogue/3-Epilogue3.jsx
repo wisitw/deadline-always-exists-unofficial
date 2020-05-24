@@ -70,7 +70,7 @@ class Epilogue3 extends Component {
             return `${key}: ${localStorage.getItem(key)}`;
         });
         console.log(resultArray);
-        fetch('https://deadline-always-exists.krist7599555.ml/append', {
+        fetch('https://deadline-always-exists-2.krist7599555.ml/api/append', {
             method: 'POST',
             body: JSON.stringify({ values: resultArray }),
             headers: { 'Content-Type': 'application/json' },
@@ -159,7 +159,7 @@ class Epilogue3 extends Component {
             this.setState({ loading: true });
             const regretNotDoing = localStorage.getItem('regretNotDoing').split(':')[1];
             const flower = this.flower_map[regretNotDoing];
-            let response = await fetch(`https://deadline-always-exists.krist7599555.ml/generateThumbnail`, {
+            let response = await fetch(`https://deadline-always-exists-2.krist7599555.ml/api/generateThumbnail`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
