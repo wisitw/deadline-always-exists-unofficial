@@ -159,25 +159,25 @@ class Epilogue3 extends Component {
             this.setState({ loading: true });
             const regretNotDoing = localStorage.getItem('regretNotDoing').split(':')[1];
             const flower = this.flower_map[regretNotDoing];
-            let response = await fetch(`https://deadline-always-exists-2.krist7599555.ml/api/generateThumbnail`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name: localStorage.getItem('name'),
-                    flower: flower,
-                }),
-            });
-            let resJson = await response.json();
-            console.log(resJson);
-            if (resJson) {
-                const data = resJson.data;
-                localStorage.setItem('imageLink', data.imageLink);
-                localStorage.setItem('shareLink', data.shareLink);
-                this.setState({ shareLink: data.shareLink, loading: false });
-                process.nextTick(() => {
-                    prompt('กรุณา copy ลิงค์นี้เพื่อแชร์ทางสื่อต่าง ๆ', this.state.shareLink);
-                });
-            }
+            // let response = await fetch(`https://deadline-always-exists-2.krist7599555.ml/api/generateThumbnail`, {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({
+            //         name: localStorage.getItem('name'),
+            //         flower: flower,
+            //     }),
+            // });
+            // let resJson = await response.json();
+            // console.log(resJson);
+            // if (resJson) {
+            //     const data = resJson.data;
+            //     localStorage.setItem('imageLink', data.imageLink);
+            //     localStorage.setItem('shareLink', data.shareLink);
+            //     this.setState({ shareLink: data.shareLink, loading: false });
+            //     process.nextTick(() => {
+            //         prompt('กรุณา copy ลิงค์นี้เพื่อแชร์ทางสื่อต่าง ๆ', this.state.shareLink);
+            //     });
+            // }
         } else {
             prompt('กรุณา copy ลิงค์นี้เพื่อแชร์ทางสื่อต่าง ๆ', this.state.shareLink);
         }

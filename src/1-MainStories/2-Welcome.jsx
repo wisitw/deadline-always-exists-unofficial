@@ -45,7 +45,7 @@ class Welcome extends Component {
                 <label className='text-left'>
                     ชื่อ
                     <br />
-                    <div className='text-small-label'>(กรุณากรอกชื่อของไทย ด้วยภาษาไทย ภาษาอังกฤษ หรือสัญลักษณ์)</div>
+                    <div className='text-small-label'>(กรุณากรอกชื่อของท่าน ด้วยภาษาไทย ภาษาอังกฤษ หรือสัญลักษณ์)</div>
                 </label>
                 <input
                     className='textarea-white no-resize textarea-text-center-welcome outline-none'
